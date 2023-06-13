@@ -24,12 +24,10 @@
 			      <th scope="col">fornecedor</th>
 			    </tr>
 			  </thead>
-			  <tbody>
-			    <tr>
-			      
+
 			      	<?php 
 			      		include 'conexao.php';
-			      		$sql = "SELECT * FROM 'estoque'";
+			      		$sql = "SELECT * FROM `estoque`";
 			      		$busca = mysqli_query($conexao, $sql);
 
 			      		while ($array = mysqli_fetch_array($busca)) {
@@ -40,19 +38,22 @@
 			      			$categoria = $array['categoria'];
 			      			$quantidade = $array['quantidade'];
 			      			$fornecedor = $array['fornecedor'];
-			      		}
-			      	?>
+			      		?>
+			     	<tr>
 
-			     <td><?php echo $numero_produto ?><td/>
-			     <td><?php echo $nome_produto ?><td/>
-			     <td><?php echo $categoria ?><td/>
-			     <td><?php echo $quantidade ?><td/>
-			     <td><?php echo $fornecedor ?><td/>
+					     <td><?php echo $numero_produto ?><td/>
+					     <td><?php echo $nome_produto ?><td/>
+					     <td><?php echo $categoria ?><td/>
+					     <td><?php echo $quantidade ?><td/>
+					     <td><?php echo $fornecedor ?><td/>
+					     <td><a class="btn btn-warning" style="color: orangered;" href="editar_produto.php?id=<?php echo $id_estoque?>" role="button">Editar</a></td>
+		
+			   		</tr>
+			    <?php } ?>
 
-			    </tr>
-			    
-			  </tbody>
 			</table>
+
+
 	</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
