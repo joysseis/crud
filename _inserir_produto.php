@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 
 include 'conexao.php';
 
@@ -8,7 +8,9 @@ $categoria = $_POST['categoria'];
 $quantidade = $_POST['quantidade'];
 $fornecedor = $_POST['fornecedor'];
 
-//echo - se quiser testar comenta o include e add o echo abaixo
+//echo $nome_produto; //- se quiser testar comenta o include e add o echo abaixo
+
+
   $sql = "INSERT INTO `estoque`(`numero_produto`, `nome_produto`, `categoria`, `quantidade`, `fornecedor`) VALUES ('$numero_produto','$nome_produto','$categoria','$quantidade','$fornecedor')";
 
 $inserir = mysqli_query($conexao,$sql);

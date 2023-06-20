@@ -2,7 +2,10 @@
 
 include 'conexao.php';
 
-$id = $_GET['id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    // Resto do código aqui
+} 
 ?>
 
 <!DOCTYPE html>
@@ -45,8 +48,8 @@ $id = $_GET['id'];
 
 			?>
 			<div class="form-group">
-				<label for="numero_produto">Número do Pedido:</label>
-				<input type="number" class="form-control" name="numero_produto" value=" <?php echo $numero_produto ?>" >
+				<label for="numero_produto">Número do Pedido:  <?php echo "$numero_produto";  ?> </label>
+				<input type="number" class="form-control" name="numero_produto" value=" <?php echo $numero_produto ?>" disabled >
 			</div>
 
 			<div class="form-group">
@@ -80,7 +83,7 @@ $id = $_GET['id'];
 			</div>
 
 			<div style="text-align: right;"> 
-				<button type="submit" id="botao" class="green-button">Atualizar</button>
+				<button type="submit" id="botao" class="green-button">Atualizar  <?php echo "$numero_produto";  ?></button>
 			</div>
 		<?php } ?>
 		</form>
