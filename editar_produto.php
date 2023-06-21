@@ -2,14 +2,7 @@
 
 include 'conexao.php';
 
-<<<<<<< HEAD
 $id = $_GET['id'];
-=======
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    // Resto do código aqui
-} 
->>>>>>> 3a56c9a34616938b4091316ad9c6e78db7f30285
 ?>
 
 <!DOCTYPE html>
@@ -36,11 +29,7 @@ if (isset($_GET['id'])) {
 <body>
 	<div class="container" id="tamanhoContainer" style="margin-top: 40px;">
 		<h4>Formulário de Cadastro</h4>
-<<<<<<< HEAD
 		<form action="atualizar.php" method="post" style="margin-top: 20px">
-=======
-		<form action="_inserir_produto.php" method="post" style="margin-top: 20px">
->>>>>>> 3a56c9a34616938b4091316ad9c6e78db7f30285
 			<?php 
 
 			$sql = "SELECT * FROM `estoque` WHERE id_estoque = $id";
@@ -56,14 +45,9 @@ if (isset($_GET['id'])) {
 
 			?>
 			<div class="form-group">
-<<<<<<< HEAD
 				<label for="numero_produto">Número do Pedido:</label>
 				<input type="number" class="form-control" name="numero_produto" value="  <?php echo $numero_produto; ?>  " >
 				<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-=======
-				<label for="numero_produto">Número do Pedido:  <?php echo "$numero_produto";  ?> </label>
-				<input type="number" class="form-control" name="numero_produto" value=" <?php echo $numero_produto ?>" disabled >
->>>>>>> 3a56c9a34616938b4091316ad9c6e78db7f30285
 			</div>
 
 			<div class="form-group">
@@ -97,11 +81,7 @@ if (isset($_GET['id'])) {
 			</div>
 
 			<div style="text-align: right;"> 
-<<<<<<< HEAD
 				<button type="submit" id="botao" class="green-button">Atualizar  <?php echo "$numero_produto"; ?> </button>
-=======
-				<button type="submit" id="botao" class="green-button">Atualizar  <?php echo "$numero_produto";  ?></button>
->>>>>>> 3a56c9a34616938b4091316ad9c6e78db7f30285
 			</div>
 		<?php } ?>
 		</form>
