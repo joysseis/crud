@@ -27,6 +27,12 @@ $id = $_GET['id'];
 </style>
 </head>
 <body>
+
+		<div class="container" style="margin-top: 40px;">
+				<div style="text-align: right;">
+	      <a href="listar_produto.php" role="button" class="btn btn-primary">Voltar</a>
+      	</div>
+
 	<div class="container" id="tamanhoContainer" style="margin-top: 40px;">
 		<h4>Formulário de Cadastro</h4>
 		<form action="atualizar.php" method="post" style="margin-top: 20px">
@@ -55,6 +61,36 @@ $id = $_GET['id'];
 				<input type="text" class="form-control" name="nome_produto"  value=" <?php echo $nome_produto ?>">
 			</div>
 
+
+				<!-- //atualização categorias recem adicionadas aparecem automaticamente -->
+				
+			<div class="form-group">
+              <label>Categoria:</label>
+              <select class="form-control" name="categoria">
+
+
+                <?php 
+                  include 'conexao.php';
+
+                  $sql = "SELECT * FROM categoria order by nome_categoria ASC";
+                  $buscar = mysqli_query($conexao, $sql);
+
+                  while($array = mysqli_fetch_array($buscar)){
+                    
+                    echo $id_categoria = $array['id_categoria'];
+                    echo $nome_categoria = $array['nome_categoria'];
+
+                  ?>
+
+                  <option> <?php echo $nome_categoria ?></option>
+
+
+                 <?php } ?> 
+              </select>
+          	</div>
+
+<!-- 	
+			forma antiga inicio de tudo
 			<div class="form-group">
 				<label>Categoria:</label>
 				<select class="form-control" name="categoria" value="<?php echo $categoria ?>" >
@@ -63,14 +99,43 @@ $id = $_GET['id'];
 					<option>Software</option>
 					<option>Celulares</option>
 				</select>
-			</div>
+			</div> -->
 
 			<div class="form-group">
 				<label>Quantidade:</label>
 				<input type="number" class="form-control" name="quantidade" value="<?php echo $quantidade ?>">
 			</div>
 
+
+
 			<div class="form-group">
+              <label>Fornecedor:</label>
+              <select class="form-control" name="fornecedor">
+
+              <?php 
+                  include 'conexao.php';
+
+                  $sql2 = "SELECT * FROM fornecedor order by nome_fornecedor ASC";
+                  $buscar2 = mysqli_query($conexao, $sql2);
+
+                  while($array2 = mysqli_fetch_array($buscar2)){
+                    
+                    echo $id_fornecedor = $array2['id_categoria'];
+                    echo $nome_fornecedor = $array2['nome_fornecedor'];
+
+                  ?>
+
+                  <option> <?php echo $nome_fornecedor ?></option>
+
+
+              <?php } ?> 
+              </select>
+          	</div>
+
+<!-- 			
+				forma antiga inicio de tudo
+
+				<div class="form-group">
 				<label>Fornecedor:</label>
 				<select class="form-control" name="fornecedor" value="<?php echo $fornecedor ?>" >
 					<option>Fornecedor A</option>
@@ -78,7 +143,7 @@ $id = $_GET['id'];
 					<option>Fornecedor C</option>
 					<option>Fornecedor D</option>
 				</select>
-			</div>
+			</div> -->
 
 			<div style="text-align: right;"> 
 				<button type="submit" id="botao" class="green-button">Atualizar  <?php echo "$numero_produto"; ?> </button>

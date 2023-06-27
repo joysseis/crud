@@ -2,12 +2,10 @@
 include 'conexao.php';
 
 $id = $_POST['id'];
-$nome_produto = $_POST['nome_produto'];
-$categoria = $_POST['categoria'];
-$quantidade = $_POST['quantidade'];
-$fornecedor = $_POST['fornecedor'];
+$nomecategoria = $_POST['nome_categoria'];
 
-$sql = "UPDATE `estoque` SET `nome_produto`='$nome_produto', `categoria`='$categoria', `quantidade`='$quantidade', `fornecedor`='$fornecedor' WHERE id_estoque = '$id'";
+
+$sql = "UPDATE `categoria` SET  `nome_categoria`='$nomecategoria' WHERE id_categoria = '$id'";
 
 $atualizar = mysqli_query($conexao, $sql);
 ?>
@@ -18,7 +16,7 @@ $atualizar = mysqli_query($conexao, $sql);
         <center>
             <h3>Atualizado com sucesso</h3>
             <div style="margin-top: 10px;">
-                <a href="listar_produto.php" class="btn btn-sm" style="color: orangered;"> Voltar </a>
+                <a href="listar_categoria.php" class="btn btn-sm" style="color: orangered;"> Voltar </a>
             </div>
         </center>
     </div>

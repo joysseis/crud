@@ -21,12 +21,37 @@
       </div>
     </div>
   </div>
+
+
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Lista de Produtos</h5>
-        <p class="card-text"> Vizualizar, editar e excluir produtos</p>
+        <p class="card-text"> Vizualizar, editar e excluir produtos. </p>
         <a href="listar_produto.php" class="btn btn-primary">Abrir</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container" style="margin-top: 40px;">
+    <div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Adicionar Categoria</h5>
+        <p class="card-text">Opção adiciona categorias.</p>
+        <a href="cadastrar_categoria.php" class="btn btn-primary">Cadastrar Categoria</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6"  >
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Adicionar Fornecedor</h5>
+        <p class="card-text"> Opção adiciona fornecedores.</p>
+        <a href="cadastrar_fornecedor.php" class="btn btn-primary">Cadastrar Fornecedor</a>
       </div>
     </div>
   </div>
