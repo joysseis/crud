@@ -22,7 +22,7 @@
 <body>
   <div class="container" id="tamanhoContainer" style="margin-top: 40px;">
 
-                  <div style="text-align: right;">
+      <div style="text-align: right;">
       <a href="index.php" role="button" class="btn btn-primary">Voltar</a>
       </div>
 
