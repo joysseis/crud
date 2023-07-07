@@ -11,6 +11,5 @@ Funcionalidades:
 - Editar os dados de um registro existente.
 - Excluir um registro do banco de dados.
 
-Este projeto foi desenvolvido como parte de um estudo sobre PHP e CRUDs básicos. Sinta-se à vontade para explorar, estudar e utilizar como base para seus próprios projetos.
-
+Este projeto foi desenvolvido como parte de um estudo sobre PHP e CRUDs básicos.
 Contribuições, sugestões e melhorias são sempre bem-vindas!
