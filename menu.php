@@ -9,9 +9,25 @@
 </head>
 <body>
 
+<?php
+$_SESSION['usuario'];
+
+if (!isset($_SESSION['usuario'])){
+  header('Location: login.php');
+}
+
+ 
+?>
+ 
+
 
 	<div class="container" style="margin-top: 100px;">
 		<div class="row">
+
+    <?php 
+    if (($nivel == 1)||($nivel == 2)) {
+    
+     ?>
   <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="card">
       <div class="card-body">
@@ -22,7 +38,7 @@
     </div>
   </div>
 
-
+<?php } ?> 
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">

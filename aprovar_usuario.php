@@ -14,7 +14,7 @@
 
 	<div class="container" style="margin-top: 40px;" >
 				<div style="text-align: right;">
-	      <a href="index.php" role="button" class="btn btn-primary">Voltar</a>
+	      <a href="menu.php" role="button" class="btn btn-primary">Voltar</a>
       </div>
       
 		<h3> Lista de Usuários</h3>
@@ -40,7 +40,7 @@
 			      			$id_usuario = $array['id_usuario'];
 			      			$nomeusuario = $array['nome_usuario'];
 			      			$mail = $array['mail_usuario'];
-
+			      			$nivel = $array['nivel_usuario'];
 
 			      	?>
 			     	<tr>
@@ -48,8 +48,10 @@
 
 					     <td><?php echo $nomeusuario ?></td>
 					     <td><?php echo $mail ?></td>
+					     <td><?php echo $nivel ?></td>
 
-					     <td>
+
+					     <!-- <td>
 					     	<form action="">
 					     	
 					     	<div class="form-group">
@@ -61,10 +63,15 @@
            					 </div>
 
 					     </form>
-					     </td>
+					     </td> -->
 
 
-					     <td><a class="btn btn-warning" style="color: orangered;" href="_aprovar_usuario.php?id=<?php echo $id_usuario ?>" role="button"> Aprovar </a>
+					     <td>
+
+					     <a class="btn btn-success" style="color: orangered;" href="_aprovar_usuario.php?id=<?php echo $id_usuario ?>&nivel=1" role="button"> Administrador </a>
+					     <a class="btn btn-warning" style="color: orangered;" href="_aprovar_usuario.php?id=<?php echo $id_usuario ?>&nivel=2" role="button"> Funcionário </a>
+					     <a class="btn btn-dark" style="color: orangered;" href="_aprovar_usuario.php?id=<?php echo $id_usuario ?>&nivel=3" role="button"> Conferente </a>
+
 					     <a class="btn btn-danger" style="color: darkred;" href="deletar_usuario.php?id=<?php echo $id_usuario ?>" role="button"><i class="fa-sharp fa-solid fa-trash"></i> Excluir</a>
 
 					     </td>

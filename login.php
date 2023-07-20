@@ -20,7 +20,7 @@
 <body>
     <div class="container" id="tamanho" style="margin-top: 40px; border-radius: 15px; border: 2px solid #f3f3f3;">
         <h5>Login</h5>
-        <form>
+        <form action="index1.php" method="post">
             <div>
                 <label>Nome de usuário</label>
                 <input type="text" class="form-control" name="usuario" placeholder="Digite seu nome de usuário">
